@@ -1,0 +1,26 @@
+Time
+********************************************************************************
+use Time::Piece;
+    
+my $t = localtime;
+my $hour = $t->hour;
+
+if    ( $hour < 8 )  { print "sleeping\n"; }
+elsif ( $hour < 9 )  { print "commuting\n"; }
+elsif ( $hour < 17 ) { print "working\n"; }
+elsif ( $hour < 18 ) { print "commuting\n"; }
+elsif ( $hour < 20 ) { print "eating\n"; }
+elsif ( $hour < 22 ) { print "resting\n"; }
+else { print "sleeping\n"; }
+********************************************************************************
+
+Factorial
+********************************************************************************
+sub factorial {
+  my $number = shift;
+  return 1 if 0 == $number;
+  return $number * factorial( $number - 1);
+}
+
+print factorial(5)
+********************************************************************************
